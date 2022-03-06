@@ -53,11 +53,16 @@ class Dashboard extends CI_Controller
 
     public function proses_pesanan()
     {
-        $data['title'] = 'Pesanan';
-        $this->cart->destroy();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar');
-        $this->load->view('proses_pesanan');
-        $this->load->view('templates/footer');
+        $is_proccessed = $this->model_invoice->index();
+        if ($is_proccessed) {
+            $data['title'] = 'Pesanan';
+            $this->cart->destroy();
+            $this->load->view('templates/header', $data);
+            $this->load->view('templates/sidebar');
+            $this->load->view('proses_pesanan');
+            $this->load->view('templates/footer');
+        } else {
+            echo "Maaf Pesanan Anda Gagal Diproses...!!";
+        }
     }
 }

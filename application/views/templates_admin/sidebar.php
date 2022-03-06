@@ -41,7 +41,7 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <a class="collapse-item" href="<?php echo base_url('admin/data_barang') ?>"><i class="fas fa-database nav-icon"></i> Data Barang</a>
-                    <a class="collapse-item" href="<?php echo base_url('admin/invoices') ?>"><i class="fas fa-file-invoice nav-icon"></i> Invoice</a>
+                    <a class="collapse-item" href="<?php echo base_url('admin/invoice') ?>"><i class="fas fa-file-invoice nav-icon"></i> Invoice</a>
                 </div>
             </div>
         </li>
